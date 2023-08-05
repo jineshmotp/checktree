@@ -1,0 +1,24 @@
+1.Downloda and install python
+https://www.youtube.com/watch?v=bCY4D9n3Pew&t=183s
+
+2.install open terminal and type 
+'python --version'
+to confirm python installed or not
+
+3. check pip version
+pip -V
+
+4.copy python file in any directory
+
+5. open terminal from python file directory
+
+6. type 
+python ntree.py 
+and enter 
+
+7. load tree text input from any directory
+
+
+
+
+

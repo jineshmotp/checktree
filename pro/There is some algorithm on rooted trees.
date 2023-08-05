@@ -1,0 +1,43 @@
+There is some algorithm on rooted trees. I don't know what it does. But
+there is a pseudocode there:
+
+function paths(N):
+   path <- empty list
+   if the node(N) has children
+      for every child node `(C)` of `N`
+         for every path `(P)` in paths(`C`)
+            add to path <- `C.data` + `P`
+    otherwise
+       add to path <- + ""
+    return path
+
+Write the pseudocode in a way similar to this pseudocode. We consider a
+node (it is called N) and we have a loop: for every child C of N do
+something. This is what you do in your algorithm.
+
+T - a rooted tree, r - the root
+v - a vertex of T
+T_v - the subtree of T rooted in v
+
+The formulas for f and g are on page 4 (of the previous version of the
+documentation). Let's make them more useful.
+for a vertex v of T let
+f(v)= the number of ISs in T_v containing v
+g(v)= the number of ISs in T_v not containing v
+
+Now if v is a leaf then f(v)=g(v)=1 as you wrote.
+
+Otherwise let v_1,...,v_n be the children of v
+the formulas are:
+f(v) = g(v_1) * ... * g(v_n)
+g(v) = (f(v_1)+g(v_1)) * ... * (f(v_n)+g(v_n))
+
+This is from your previous documentation but the arguments of f anfg are
+now vertices instead of subtrees.
+Now use these formulas in the pseudocode in a similar way to the way it
+is written in the pseudocode above.
+to compute f(v) and g(v) for v which is not a leaf we will have a loop
+
+f(v)=...
+
+for every child w of v
